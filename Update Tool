@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+
+april_data = pd.read_excel(r'')
+march_big = pd.read_excel(r'')
+
+march_matrix = march_big.rename(columns={'AEP Ohio CRES Customer Counts':'Year', 'Unnamed: 1':'Month',
+                                            'Unnamed: 2':'Residential Customer Count','Unnamed: 3':'C&I Customer Count',
+                                           'Unnamed: 4':'Total Customer Count'})
+march_matrix = march_matrix.iloc[4:]
+
+april = pd.DataFrame(april_data)
+april = april.rename(columns={'Residential_Customer_Count':'Residential Customer Count','CI_Customer_Count':'C&I Customer Count',
+                      'Total_Customer_Count':'Total Customer Count'})
+                      
+april_matrix = march_matrix.append(april)
+april_matrix                      
