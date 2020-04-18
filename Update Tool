@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-april_data = pd.read_excel(r'')
-march_big = pd.read_excel(r'')
+april_data = pd.read_excel(r'/Users/MattPettit/Desktop/AEP April Data.xlsx')
+march_big = pd.read_excel(r'/Users/MattPettit/Desktop/AEP Ohio SSO Customer Counts - April 2020.xlsx')
 
 march_matrix = march_big.rename(columns={'AEP Ohio CRES Customer Counts':'Year', 'Unnamed: 1':'Month',
                                             'Unnamed: 2':'Residential Customer Count','Unnamed: 3':'C&I Customer Count',
